@@ -63,3 +63,22 @@ def can_double_down(card_one, card_two):
         return True
     else:
         return False
+
+def main():
+    """Main function to run the blackjack game."""
+    
+    print("Welcome to Blackjack!")
+    print("You have been dealt two cards.")
+    card_one = input("Enter your first card: ")
+    card_two = input("Enter your second card: ")
+
+    print(f"Your cards are: {card_one} and {card_two}")
+    print(f"Your highest card is: {higher_card(card_one, card_two)}")
+    print(f"The value of your cards is: {value_of_ace(card_one, card_two)}")
+    print(f"Is this a blackjack hand? {is_blackjack(card_one, card_two)}")
+    print(f"Can you split your hand? {can_split_pairs(card_one, card_two)}")
+    print(f"Can you double down? {can_double_down(card_one, card_two)}")
+
+
+if __name__ == '__main__':
+    main()
